@@ -9,6 +9,10 @@
   "author": "",
   "license": "ISC",
   "devDependencies": {
-    "cypress": "^13.6.1"
+    "cypress": "^13.6.1",
+    "cypress-iframe": "^1.0.1"
+  },
+  "dependencies": {
+    "chromedriver": "121.0.6167.140"
   }
 }

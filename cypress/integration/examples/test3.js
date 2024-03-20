@@ -21,5 +21,15 @@ describe('This is the third test case, automating web elements II', function()
             }
         })
         cy.get('#autocomplete').should('have.value', 'Colombia')
+
+        //Hyde and show fields
+        cy.get('#displayed-text').should('be.visible')
+        cy.get('#hide-textbox').click()
+        cy.get('#displayed-text').should('not.be.visible')
+        cy.get('#show-textbox').click()
+        cy.get('#displayed-text').should('be.visible')
+
+        //Radio buttons
+        cy.get('[value="radio2"]').check().should('be.checked')
     }) 
 })
