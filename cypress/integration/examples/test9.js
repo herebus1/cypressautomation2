@@ -3,7 +3,7 @@ import HomePage  from "../pageObjects/HomePage";
 import ProductsPage from "../pageObjects/ProdcutsPage";
 
 //You need to install the iframe plugin npm install -D cypress-iframe
-describe('This is the nineth test case, before and after hooks', function()
+describe('This is the nineth test case, before and after hooks, implementing a framework', function()
 {   
     let data; //closure variable
     before(function(){
@@ -17,8 +17,8 @@ describe('This is the nineth test case, before and after hooks', function()
 
         const homePage = new HomePage()
         const productsPage = new ProductsPage()
-
-          cy.visit('https://www.rahulshettyacademy.com/angularpractice/ ')  
+          
+          cy.visit(Cypress.env('url')+'/angularpractice/')  
           homePage.getEditBox().type(data.name) 
           homePage.getGender().select(data.gender)
           homePage.getDataBinding().should('have.value', data.name)

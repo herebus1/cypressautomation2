@@ -6,7 +6,7 @@ import 'cypress-iframe'
 describe('This is the eighth test case, automating web elements VII', function()
 {
     it('Eighth test case, DOM Iframes', () => {
-        cy.visit('https://rahulshettyacademy.com/AutomationPractice/')
+        cy.visit(Cypress.env('url')+'/AutomationPractice/')
         cy.frameLoaded('#courses-iframe')
         cy.iframe().find('a[href="mentorship"]').eq(0).click()
         cy.wait(2000)
