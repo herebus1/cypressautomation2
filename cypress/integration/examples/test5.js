@@ -10,7 +10,7 @@ describe('This is the fifth test case, automating web elements IV', function()
         //Command to change to a new website
         cy.origin('https://www.qaclickacademy.com/', () => {
             cy.get('#navbarSupportedContent a[href*="about"]').click()
-            cy.get('.mt-50 h2').should('contain', 'QAClick Academy') 
+            cy.get('.mt-50 h2').should('contain', 'QAClick Academyy') 
         })
         
     }) 
