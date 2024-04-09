@@ -8,15 +8,21 @@
     "headTest": "npm run test -- --headed",
     "chromeTest": "npm run test -- --browser chrome",
     "recordCloudTest": "npm run test -- --record --key 06499df6-3ffe-4a1d-872f-f3aa072ec3b4 --reporter mochawesome"
-
   },
-  "author": "",
+  "cypress-cucumber-preprocessor":{
+    "json": {
+      "enabled": true,
+      "output": "cypress/Reports/results.json"
+    }
+  },
+  "author": "Herebus",
   "license": "ISC",
   "devDependencies": {
     "cypress": "^13.6.1",
     "cypress-iframe": "^1.0.1"
   },
   "dependencies": {
-    "chromedriver": "121.0.6167.140"
+    "@badeball/cypress-cucumber-preprocessor": "^20.0.3",
+    "@cypress/browserify-preprocessor": "latest"
   }
 }
