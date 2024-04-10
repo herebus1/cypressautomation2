@@ -28,7 +28,8 @@ module.exports = defineConfig({
   },
   e2e: {
     //Provide the path where cypress can find the spec files to execute
-    specPattern: "**/*.feature",
+    //specPattern: "**/*.feature",
+    specPattern: "**/*.js",
     setupNodeEvents,
     screenshotsFolder: 'cypress/fails/screenshots',
   },

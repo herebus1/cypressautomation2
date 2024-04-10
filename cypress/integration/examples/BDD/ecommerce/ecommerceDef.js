@@ -1,4 +1,4 @@
-import { Given,When,And,Then } from "cypress-cucumber-preprocessor/steps";
+import { Given,When,Then } from "@badeball/cypress-cucumber-preprocessor";
 import HomePage  from "../ecommerce/pageObjects/HomePage"; 
 import ProductsPage from "../ecommerce/pageObjects/ProdcutsPage";
 
@@ -19,7 +19,7 @@ When('I add items to the cart', () => {
     productsPage.getCheckout().click()
 })
 
-And('Validate the total prices', () =>{
+When('Validate the total prices', () =>{
     var sum = 0
           cy.get('tr td:nth-child(4) strong').each(($el, index, $list) => {
             const amount = $el.text()
@@ -64,6 +64,6 @@ Then('Validate the form behavior', function(){
     homePage.getEntrepeneur().should('be.disabled')
 })
 
-And('open the shop page', () =>{
+Then('open the shop page', () =>{
     homePage.getShopTab().click() 
 })

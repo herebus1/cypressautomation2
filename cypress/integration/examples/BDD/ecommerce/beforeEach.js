@@ -1,5 +1,6 @@
 beforeEach(() =>{
-    cy.fixture('example').then(function(data){
-        this.data=data
+    let data;
+    cy.fixture('example.json').then((Fdata) =>{
+        data=Fdata
     })
 });

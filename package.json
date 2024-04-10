@@ -9,7 +9,7 @@
     "chromeTest": "npm run test -- --browser chrome",
     "recordCloudTest": "npm run test -- --record --key 06499df6-3ffe-4a1d-872f-f3aa072ec3b4 --reporter mochawesome"
   },
-  "cypress-cucumber-preprocessor":{
+  "cypress-cucumber-preprocessor": {
     "json": {
       "enabled": true,
       "output": "cypress/Reports/results.json"
@@ -18,11 +18,14 @@
   "author": "Herebus",
   "license": "ISC",
   "devDependencies": {
-    "cypress": "^13.6.1",
+    "cypress": "^13.7.2",
     "cypress-iframe": "^1.0.1"
   },
   "dependencies": {
     "@badeball/cypress-cucumber-preprocessor": "^20.0.3",
-    "@cypress/browserify-preprocessor": "latest"
+    "@cypress/browserify-preprocessor": "latest",
+    "convert-excel-to-json": "^1.7.0",
+    "multiple-cucumber-html-reporter": "^3.6.2",
+    "neat-csv": "^5.1.0"
   }
 }

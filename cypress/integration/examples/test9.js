@@ -1,6 +1,6 @@
 /// <reference types="cypress" />
-import HomePage  from "../pageObjects/HomePage"; 
-import ProductsPage from "../pageObjects/ProdcutsPage";
+import HomePage  from "./BDD/ecommerce/pageObjects/HomePage"; 
+import ProductsPage from "./BDD/ecommerce/pageObjects/ProdcutsPage";
 
 //You need to install the iframe plugin npm install -D cypress-iframe
 describe('This is the nineth test case, before and after hooks, implementing a framework', function()
